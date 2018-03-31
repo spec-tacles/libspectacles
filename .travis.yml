@@ -1,8 +1,9 @@
 language: cpp
 compiler: gcc
-script: bash ./travis/test.sh
 jobs:
   include:
+    - stage: test
+      script: bash ./travis/test.sh
     - stage: deploy
       script: bash ./travis/deploy.sh
       env:
