@@ -1,0 +1,16 @@
+language: cpp
+compiler: gcc
+script: bash ./travis/test.sh
+jobs:
+  include:
+    - stage: deploy
+      script: bash ./travis/deploy.sh
+      env:
+        - ENCRYPTION_LABEL="29558b51d689"
+        - COMMIT_AUTHOR_EMAIL="admin@hackzzila.com"
+      addons:
+        apt:
+          packages:
+            - doxygen
+dist: trusty
+sudo: required

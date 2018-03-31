@@ -1,0 +1,8 @@
+.vscode
+build
+test
+docs
+docker-compose.yml
+
+deploy-key
+deploy-key.pub
